@@ -1,0 +1,34 @@
+create schema mydb;
+use mydb;
+
+create table employee(id int,firstname varchar(20),lastname varchar(20));
+
+select * from employee;
+
+
+ALTER USER 'root localhost' IDENTIFIED WITH mysql_native_password BY 'password';
+
+flush privileges;
+
+
+create table product(id int,name varchar(20),description varchar(100),price decimal(8,3));
+
+select * from product;
+
+select * from passenger;
+
+
+insert into employee values (10, 'Jack', 'Mishra');
+
+
+ALTER USER 'root'@'localhost' IDENTIFIED WITH mysql_native_password BY 'YourRootPassword';
+-- or
+CREATE USER 'foo'@'%' IDENTIFIED WITH mysql_native_password BY 'bar';
+-- then
+FLUSH PRIVILEGES;
+
+
+
+GRANT ALL PRIVILEGES ON mydb. * TO 'foo'@'%';
+
+commit;
