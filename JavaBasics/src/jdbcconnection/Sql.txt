@@ -32,3 +32,19 @@ FLUSH PRIVILEGES;
 GRANT ALL PRIVILEGES ON mydb. * TO 'foo'@'%';
 
 commit;
+
+
+
+
+CREATE TABLE `mydb`.`student` (
+  `id` INT NOT NULL AUTO_INCREMENT,
+  `name` VARCHAR(45) NULL,
+  `age` INT NULL,
+  `tot_mark` INT NULL,
+  `address` VARCHAR(225) NULL,
+  `roll_no` INT NULL,
+  PRIMARY KEY (`id`));
+
+  
+  INSERT INTO `mydb`.`student` (`name`, `age`, `tot_mark`, `address`, `roll_no`) VALUES ('Jagannath', '28', '900', 'Hyderabad', '105');
+  
